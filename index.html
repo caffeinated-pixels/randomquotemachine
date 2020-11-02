@@ -24,7 +24,7 @@
       href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.min.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -34,20 +34,26 @@
 
     <main class="container" id="quote-box">
       <p class="text-center" id="text">Quote goes here</p>
-      <p class="text-right" id="author">Author goes here</p>
+      <p class="text-right" id="author">-- Author goes here</p>
 
-      <div class="buttons">
-        <button class="btn btn-primary" id="new-quote">HIT ME AGAIN!</button>
-        <a id="tweet-quote" title="Tweet quote!"
-          ><button class="btn btn-primary">
-            TW
-          </button></a
-        >
-        <a id="facebook" title="Share quote on Facebook!"
-          ><button class="btn btn-primary">
-            FB
-          </button></a
-        >
+      <div class="row justify-content-between buttons">
+        <button class="col-auto btn btn-primary" id="new-quote">
+          HIT ME AGAIN!
+        </button>
+
+        <div class="col-auto share-btns">
+          <a id="tweet-quote" class="" title="Tweet quote!"
+            ><button class="btn btn-primary">
+              TW
+            </button></a
+          >
+
+          <a id="facebook" class="" title="Share quote on Facebook!"
+            ><button class="btn btn-primary">
+              FB
+            </button></a
+          >
+        </div>
       </div>
     </main>
 
