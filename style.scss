@@ -1,3 +1,50 @@
+/* setup some variables!!! */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Acme', sans-serif;
+  line-height: 1.42857143;
+  font-size: 1.125rem;
+  background-color: salmon;
+}
+
 h1 {
-  color: blue;
+  font-family: 'Monofett';
+  color: darkred;
+  font-size: 50px;
+}
+
+header {
+  background-color: lightblue;
+  min-width: 350px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#quote-box {
+  margin-top: 25px;
+  padding: 25px 50px;
+  box-shadow: 5px 5px 15px grey;
+  background-color: beige;
+  min-width: 350px;
+  border-radius: 15px;
+}
+
+#text {
+  font-size: 36px;
+}
+
+#author {
+  font-size: 24px;
+}
+
+#tweet-quote,
+#facebook {
+  float: right;
+  margin-right: 5px;
 }

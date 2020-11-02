@@ -14,11 +14,42 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Acme|Monofett"
+      rel="stylesheet"
+    />
+    <!-- remove Quicksand??? -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.min.css" />
   </head>
 
   <body>
-    <h1>Hello World!</h1>
+    <header class="container text-center">
+      <h1>QUOTE-O-MATIC 4000<sup>TM</sup></h1>
+    </header>
+
+    <main class="container" id="quote-box">
+      <p class="text-center" id="text">Quote goes here</p>
+      <p class="text-right" id="author">Author goes here</p>
+
+      <div class="buttons">
+        <button class="btn btn-primary" id="new-quote">HIT ME AGAIN!</button>
+        <a id="tweet-quote" title="Tweet quote!"
+          ><button class="btn btn-primary">
+            TW
+          </button></a
+        >
+        <a id="facebook" title="Share quote on Facebook!"
+          ><button class="btn btn-primary">
+            FB
+          </button></a
+        >
+      </div>
+    </main>
 
     <!-- load jQuery -->
     <script
