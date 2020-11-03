@@ -1,4 +1,4 @@
-/* setup some variables!!! */
+/* setup some global variables!!! */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,15 +7,15 @@
 
 body {
   font-family: 'Acme', sans-serif;
-  line-height: 1.42857143;
   font-size: 1.125rem;
+  line-height: 1.42857143;
   background-color: salmon;
 }
 
 h1 {
   font-family: 'Monofett';
-  color: darkred;
   font-size: 50px;
+  color: darkred;
 }
 
 header {

@@ -1,4 +1,6 @@
-/* setup some variables!!! */
+/* setup some global variables!!! */
+$bs3-btnblue: #337ab7;
+$bs3-btnblue-border: #2e6da4;
 
 * {
   box-sizing: border-box;
@@ -7,23 +9,31 @@
 }
 
 body {
-  font-family: 'Acme', sans-serif;
+  font: {
+    family: 'Acme', sans-serif;
+    size: 1.125rem;
+  }
+
   line-height: 1.42857143;
-  font-size: 1.125rem;
   background-color: salmon;
 }
 
 h1 {
-  font-family: 'Monofett';
+  font: {
+    family: 'Monofett';
+    size: 50px;
+  }
+
   color: darkred;
-  font-size: 50px;
 }
 
 header {
   background-color: lightblue;
   min-width: 350px;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding: {
+    top: 20px;
+    bottom: 10px;
+  }
 }
 
 #quote-box {
@@ -45,7 +55,7 @@ header {
 
 .share-btns {
   // background-color: #f5d3f9;
-  padding-right: 0;
+  padding-right: 0; // to counter BS row padding
 }
 
 // #tweet-quote {
@@ -64,6 +74,6 @@ header {
 }
 
 .btn-primary {
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: $bs3-btnblue;
+  border-color: $bs3-btnblue-border;
 }
