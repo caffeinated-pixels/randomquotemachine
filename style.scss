@@ -76,4 +76,13 @@ header {
 .btn-primary {
   background-color: $bs3-btnblue;
   border-color: $bs3-btnblue-border;
+  height: 40px;
+}
+
+.fa-twitter {
+  padding-right: 6px;
+}
+
+footer {
+  margin-top: 40px;
 }
