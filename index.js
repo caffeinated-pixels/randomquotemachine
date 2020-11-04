@@ -16,24 +16,31 @@ $(document).ready(function() {
   ]
 
   const getQuote = () => {
-    //I though it would be fun to include some error handling in the fetch request
-    const errorMsg = updateText('Opps something went wrong', '')
+    //Just to overcomplicate things, I included some error handling in the fetch request, but I thought it would be a useful exercise
+    const errorMsg = updateText('Opps something went wrong')
 
     fetch('https://api.quotable.io/random')
-      // only a successful request will supply a response.ok
-      .then(response => (response.ok ? response.json() : errorMsg))
+      // only a fulfilled Promise (including 4xx, 5xx errors) will supply a response.ok
+      .then(response => {
+        if (response.ok) {
+          return response.json()
+        } else {
+          console.log(response.status)
+          return errorMsg
+        }
+      })
       .then(data => (data ? updateText(data.content, data.author) : null))
       .catch(error => {
         console.log(error)
-        errorMsg
-      }) // catch only rejects on network errors (see above)
+        return errorMsg
+      }) // Promise is only rejected for network errors (eg host not found)
   }
 
   const updateText = (text, author) => {
     //select random color without repeating previous color
     const oldColor = $('#text').css('color') // get prev color (always returns RGB)
     const updatedColors = [...colors].filter(item => item !== oldColor) // remove prev col
-    const color = Math.floor(Math.random() * updatedColors.length) // random color
+    const color = Math.floor(Math.random() * updatedColors.length) // random index
 
     // display quote and author on page using fade animations
     $('#text').fadeOut(750, () => {
@@ -43,10 +50,12 @@ $(document).ready(function() {
       $('#text').fadeIn(1000)
     }) // need to use callback so it waits for fadeOut to finish!
 
-    $('#author').fadeOut(750, () => {
-      $('#author').html(`&#8212\xa0\xa0${author}`)
-      $('#author').fadeIn(3000)
-    }) // need to use callback so it waits for fadeOut to finish!
+    if (author) {
+      $('#author').fadeOut(750, () => {
+        $('#author').html(`&#8212\xa0\xa0${author}`)
+        $('#author').fadeIn(3000)
+      }) // need to use callback so it waits for fadeOut to finish!
+    }
 
     // update href of tweet button
     $('#tweet-quote').attr(
