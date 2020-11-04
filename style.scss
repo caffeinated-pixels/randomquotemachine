@@ -2,6 +2,11 @@
 $bs3-btnblue: #337ab7;
 $bs3-btnblue-border: #2e6da4;
 
+// mixin for text-shadow with default args
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 2px, $color: #c0c0c0) {
+  text-shadow: $x $y $blur $color;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -43,7 +48,7 @@ header {
   background-color: beige;
   min-width: 350px;
   border-radius: 15px;
-  text-shadow: 2px 2px 2px #c0c0c0;
+  @include text-shadow(); // using default values
 }
 
 #text {
@@ -55,7 +60,7 @@ header {
 }
 
 .share-btns {
-  padding-right: 0; // to counter BS row padding
+  padding-right: 0; // to counter Bootstrap default row padding
 }
 
 .btn-primary {
@@ -70,4 +75,5 @@ header {
 
 footer {
   margin-top: 40px;
+  @include text-shadow($color: #615858); // pass in value for color
 }

@@ -23,7 +23,6 @@ $(document).ready(function() {
         //select random color without repeating previous color
         const oldColor = $('#text').css('color') // get prev color (always returns RGB)
         const updatedColors = [...colors].filter(item => item !== oldColor) // remove prev col
-        console.log(oldColor, updatedColors.length)
         const color = Math.floor(Math.random() * updatedColors.length) // random color
 
         // display quote and author on page using fade animations
