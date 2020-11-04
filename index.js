@@ -16,24 +16,24 @@ $(document).ready(function() {
   ]
 
   const getQuote = () => {
-    //Just to overcomplicate things, I included some error handling in the fetch request, but I thought it would be a useful exercise
+    // Just to overcomplicate things, I included some error handling in the fetch request as I thought it would be a useful exercise
     const errorMsg = updateText('Opps something went wrong')
 
     fetch('https://api.quotable.io/random')
-      // only a fulfilled Promise (including 4xx, 5xx errors) will supply a response.ok
+      // response.ok = true if responsse successful
       .then(response => {
         if (response.ok) {
           return response.json()
         } else {
-          console.log(response.status)
+          console.log(`Response error is: ${response.status}`)
           return errorMsg
         }
       })
       .then(data => (data ? updateText(data.content, data.author) : null))
       .catch(error => {
-        console.log(error)
+        console.log(`Caught error is: ${error}`)
         return errorMsg
-      }) // Promise is only rejected for network errors (eg host not found)
+      }) // Promise is only rejected for network errors (eg host not found), not client client errors (eg 4xx, 5xx)
   }
 
   const updateText = (text, author) => {
