@@ -4,8 +4,23 @@ $(document).ready(function() {
       // only a successful request will supply a response.ok
       .then(response => (response.ok ? response.json() : console.log('balls')))
       .then(data => {
-        $('#text').html(data.content)
-        $('#author').html(`&#8212\xa0\xa0${data.author}`)
+        // display quote and author on page
+
+        $('#text').fadeOut(750, () => {
+          $('#text').html(data.content)
+          $('#text').fadeIn(1000)
+        }) // need to use callback so it waits for fadeOut to finish!
+
+        $('#author').fadeOut(750, () => {
+          $('#author').html(`&#8212\xa0\xa0${data.author}`)
+          $('#author').fadeIn(4000)
+        })
+
+        // $('#text').html(data.content)
+
+        // $('#author').html(`&#8212\xa0\xa0${data.author}`)
+
+        // update href of tweet button
         $('#tweet-quote').attr(
           'href',
           'http://twitter.com/intent/tweet?text=' +
