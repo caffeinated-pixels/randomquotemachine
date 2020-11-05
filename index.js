@@ -20,7 +20,7 @@ $(document).ready(function() {
     const errorMsg = updateText('Opps something went wrong')
 
     fetch('https://api.quotable.io/random')
-      // response.ok = true if responsse successful
+      // response.ok = true if response successful
       .then(response => {
         if (response.ok) {
           return response.json()

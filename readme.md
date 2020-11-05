@@ -4,7 +4,7 @@ This is for the Random Quote Machine [freeCodeCamp challenge](https://www.freeco
 
 This is a 2020 remake of the Random Quote Machine [I created back in 2017](https://codepen.io/cakeisaliegaming/pen/MOvWdg). How time flies!
 
-My aim was to reacquaint myself with Bootstrap and jQuery, and to try out Sass and Git/GitHub for the first time. Hence this readme!!!
+My aim was to reacquaint myself with Bootstrap and jQuery, and to try out Sass and Git/GitHub for the first time. That said, the layout is very simple so doesn't make much use of either Bootstrap or Sass!
 
 ## API notes
 

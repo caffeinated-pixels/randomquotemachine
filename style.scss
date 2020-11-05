@@ -1,10 +1,16 @@
-// setup some global variables!!!
+// some global variables
 $bs3-btnblue: #337ab7;
 $bs3-btnblue-border: #2e6da4;
 
 // mixin for text-shadow with default args
 @mixin text-shadow($x: 2px, $y: 2px, $blur: 2px, $color: #c0c0c0) {
   text-shadow: $x $y $blur $color;
+}
+
+// function for calculating REMs from px (assuming base font is 16px)
+@function calculateRem($size) {
+  $remSize: ($size / 16px);
+  @return #{$remSize}rem;
 }
 
 * {
@@ -16,7 +22,7 @@ $bs3-btnblue-border: #2e6da4;
 body {
   font: {
     family: 'Acme', sans-serif;
-    size: 1.125rem;
+    size: calculateRem(18px);
   }
 
   line-height: 1.42857143;
@@ -26,7 +32,7 @@ body {
 h1 {
   font: {
     family: 'Monofett';
-    size: 50px;
+    size: calculateRem(50px);
   }
 
   color: darkred;
@@ -52,21 +58,16 @@ header {
 }
 
 #text {
-  font-size: 36px;
+  font-size: calculateRem(36px);
 }
 
 #author {
-  font-size: 24px;
-}
-
-.share-btns {
-  padding-right: 0; // to counter Bootstrap default row padding
+  font-size: calculateRem(24px);
 }
 
 .btn-primary {
   background-color: $bs3-btnblue;
   border-color: $bs3-btnblue-border;
-  height: 40px;
 }
 
 .fa-twitter {
@@ -75,5 +76,5 @@ header {
 
 footer {
   margin-top: 40px;
-  @include text-shadow($color: #615858); // pass in value for color
+  @include text-shadow($color: #615858); // override default color
 }
