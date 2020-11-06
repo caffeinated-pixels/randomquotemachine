@@ -1,10 +1,10 @@
 # Random Quote Machine
 
-This is for the Random Quote Machine [freeCodeCamp challenge](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine):
+This is the app I created for the [Random Quote Machine freeCodeCamp challenge](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine). It's actually a 2020 remake of a version [I created back in 2017](https://codepen.io/cakeisaliegaming/pen/MOvWdg). How time flies!
 
-This is a 2020 remake of the Random Quote Machine [I created back in 2017](https://codepen.io/cakeisaliegaming/pen/MOvWdg). How time flies!
+My aim was to reacquaint myself with Bootstrap and jQuery, and to try out using Sass and Git/GitHub for the first time. That said, the layout is very simple so doesn't make much use of either Bootstrap or Sass!
 
-My aim was to reacquaint myself with Bootstrap and jQuery, and to try out Sass and Git/GitHub for the first time. That said, the layout is very simple so doesn't make much use of either Bootstrap or Sass!
+This project was also my first time using Git and GitHub!
 
 ## API notes
 
