@@ -4,7 +4,7 @@ This is the app I created for the [Random Quote Machine freeCodeCamp challenge](
 
 My aim was to reacquaint myself with Bootstrap and jQuery, and to try out using Sass and Git/GitHub for the first time. That said, the layout is very simple so doesn't make much use of either Bootstrap or Sass!
 
-This project was also my first time using Git and GitHub!
+You can [see my Random Quote Machine in action](https://quote-o-matic-4000.netlify.app/) here.
 
 ## API notes
 
