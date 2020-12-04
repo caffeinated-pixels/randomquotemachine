@@ -54,7 +54,11 @@ header {
   background-color: beige;
   min-width: 350px;
   border-radius: 15px;
-  @include text-shadow(); // using default values
+   // using default values
+}
+
+#text, #author {
+  @include text-shadow();
 }
 
 #text {

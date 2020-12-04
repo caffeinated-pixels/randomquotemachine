@@ -31,6 +31,9 @@ header {
   background-color: beige;
   min-width: 350px;
   border-radius: 15px;
+}
+
+#text, #author {
   text-shadow: 2px 2px 2px #c0c0c0;
 }
 
