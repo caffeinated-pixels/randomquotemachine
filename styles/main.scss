@@ -1,3 +1,5 @@
+@import '_reset';
+
 // some global variables
 $bs3-btnblue: #337ab7;
 $bs3-btnblue-border: #2e6da4;
@@ -11,12 +13,6 @@ $bs3-btnblue-border: #2e6da4;
 @function calculateRem($size) {
   $remSize: ($size / 16px);
   @return #{$remSize}rem;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -54,10 +50,11 @@ header {
   background-color: beige;
   min-width: 350px;
   border-radius: 15px;
-   // using default values
+  // using default values
 }
 
-#text, #author {
+#text,
+#author {
   @include text-shadow();
 }
 
