@@ -53,18 +53,24 @@
 }
 
 .button {
-  background-color: $bs3-btnblue;
+  background-color: $button-blue;
   color: $button-text-color;
   border-radius: 5px;
   padding: 0.25em 0.75em;
   cursor: pointer;
   outline: none;
+  border: none;
   text-decoration: none;
 }
 
 .button:hover,
 .button:focus {
-  border: 1px solid $bs3-btnblue-border;
+  box-shadow: 0 0 0 2px orange;
+  background-color: $blue-dk-blue;
+}
+
+.button:active {
+  transform: scale(0.95);
 }
 
 .fa-twitter {

@@ -157,12 +157,18 @@ header {
   padding: 0.25em 0.75em;
   cursor: pointer;
   outline: none;
+  border: none;
   text-decoration: none;
 }
 
 .button:hover,
 .button:focus {
-  border: 1px solid #2e6da4;
+  box-shadow: 0 0 0 2px orange;
+  background-color: #275d8b;
+}
+
+.button:active {
+  transform: scale(0.95);
 }
 
 .fa-twitter {
