@@ -1,0 +1,32 @@
+// main: ./main.scss
+
+// some global variables
+$bs3-btnblue: #337ab7;
+$bs3-btnblue-border: #2e6da4;
+$body-bg: salmon;
+
+$header-bg: lightblue;
+$header-text: darkred;
+
+// mixin for text-shadow with default args
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 2px, $color: #c0c0c0) {
+  text-shadow: $x $y $blur $color;
+}
+
+// function for calculating REMs from px (assuming base font is 16px)
+@function calculateRem($size) {
+  $remSize: ($size / 16px);
+  @return #{$remSize}rem;
+}
+
+body {
+  font: {
+    family: 'Acme', sans-serif;
+    size: 1rem;
+  }
+
+  text-align: center;
+
+  line-height: 1.5;
+  background-color: $body-bg;
+}

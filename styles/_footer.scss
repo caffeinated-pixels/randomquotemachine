@@ -1,0 +1,6 @@
+// main: ./main.scss
+
+footer {
+  margin-top: 2em;
+  @include text-shadow($color: #615858); // override default color
+}

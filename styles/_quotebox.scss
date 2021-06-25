@@ -1,0 +1,32 @@
+// main: ./main.scss
+
+#quote-box {
+  margin-top: 25px;
+  padding: 25px 50px;
+  box-shadow: 5px 5px 15px grey;
+  background-color: beige;
+  min-width: 350px;
+  border-radius: 15px;
+}
+
+#text,
+#author {
+  @include text-shadow();
+}
+
+#text {
+  font-size: 1.5rem;
+}
+
+#author {
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: $bs3-btnblue;
+  border-color: $bs3-btnblue-border;
+}
+
+.fa-twitter {
+  padding-right: 0.5em;
+}

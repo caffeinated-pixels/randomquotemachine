@@ -1,0 +1,17 @@
+// main: ./main.scss
+
+h1 {
+  font: {
+    family: 'Monofett';
+    size: 2.5rem;
+  }
+
+  color: $header-text;
+}
+
+header {
+  background-color: $header-bg;
+  width: 100%;
+  max-width: 600px;
+  padding: 1em;
+}

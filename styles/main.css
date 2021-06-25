@@ -77,22 +77,23 @@ select {
 
 body {
   font-family: 'Acme', sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.42857143;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
   background-color: salmon;
 }
 
 h1 {
   font-family: 'Monofett';
-  font-size: 3.125rem;
+  font-size: 2.5rem;
   color: darkred;
 }
 
 header {
   background-color: lightblue;
-  min-width: 350px;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  width: 100%;
+  max-width: 600px;
+  padding: 1em;
 }
 
 #quote-box {
@@ -110,11 +111,11 @@ header {
 }
 
 #text {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 
 #author {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .btn-primary {
@@ -123,10 +124,10 @@ header {
 }
 
 .fa-twitter {
-  padding-right: 6px;
+  padding-right: 0.5em;
 }
 
 footer {
-  margin-top: 40px;
+  margin-top: 2em;
   text-shadow: 2px 2px 2px #615858;
 }
