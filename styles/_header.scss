@@ -3,7 +3,7 @@
 h1 {
   font: {
     family: 'Monofett';
-    size: 2.5rem;
+    size: 2rem;
   }
 
   color: $header-text;
@@ -12,6 +12,6 @@ h1 {
 header {
   background-color: $header-bg;
   width: 100%;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   line-height: 1;
 }

@@ -2,20 +2,23 @@
 
 .quote-box {
   margin-top: 1.5em;
-  padding: 0.5em 1em;
+  padding: 1em;
   box-shadow: 5px 5px 15px grey;
   background-color: $quote-box-bg;
 
-  height: 450px;
+  max-width: 700px;
+  height: 400px;
+
   // display: flex;
   // flex-direction: column;
   // justify-content: center;
   display: grid;
   grid-template-rows: 1fr auto;
+  border-radius: 2%;
 }
 
 .text-wrapper {
-  // background-color: lightblue;
+  // border: 1px solid black;
   align-self: center;
 }
 
@@ -26,6 +29,20 @@
 
 .quote-box-text {
   font-size: 1.5rem;
+  // position: relative;
+  // background-color: lightblue;
+}
+
+.quote-box-text::before {
+  content: open-quote;
+  // position: absolute;
+  font-size: 2.5em;
+  line-height: 0;
+  opacity: 0.3;
+  padding-right: 2px;
+  // left: -5px;
+  // top: -30px;
+  vertical-align: middle;
 }
 
 .quote-box-author {
