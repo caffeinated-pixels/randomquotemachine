@@ -79,7 +79,7 @@ body {
   font-family: 'Acme', sans-serif;
   font-size: 1rem;
   text-align: center;
-  background-color: salmon;
+  background: #fb9084;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,5 +178,16 @@ header {
 footer {
   margin-top: auto;
   margin-bottom: 0.3em;
-  text-shadow: 2px 2px 2px #615858;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 1px #615858;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #002477;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #800080;
 }

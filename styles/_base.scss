@@ -3,22 +3,21 @@
 // some global variables
 $button-blue: #337ab7;
 $blue-dk-blue: #275d8b;
-$body-bg: salmon;
+$body-bg: #fb9084;
+// $body-bg: salmon;
+// $body-bg: linear-gradient(to bottom, #fa8072, #fba69d);
 
 $header-bg: lightblue;
 $header-text: darkred;
 $quote-box-bg: beige;
 $button-text-color: white;
 
+$footer-link-color: #002477;
+$footer-link-hover-color: #800080;
+
 // mixin for text-shadow with default args
 @mixin text-shadow($x: 2px, $y: 2px, $blur: 2px, $color: #c0c0c0) {
   text-shadow: $x $y $blur $color;
-}
-
-// function for calculating REMs from px (assuming base font is 16px)
-@function calculateRem($size) {
-  $remSize: ($size / 16px);
-  @return #{$remSize}rem;
 }
 
 body {
@@ -27,7 +26,7 @@ body {
     size: 1rem;
   }
   text-align: center;
-  background-color: $body-bg;
+  background: $body-bg;
 
   display: flex;
   flex-direction: column;

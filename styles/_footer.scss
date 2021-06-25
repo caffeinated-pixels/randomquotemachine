@@ -3,5 +3,16 @@
 footer {
   margin-top: auto;
   margin-bottom: 0.3em;
-  @include text-shadow($color: #615858); // override default color
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 1px #615858;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: $footer-link-color;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: $footer-link-hover-color;
 }
