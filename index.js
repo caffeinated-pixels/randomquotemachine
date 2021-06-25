@@ -38,6 +38,9 @@ $(document).ready(function() {
 
   const updateText = (text, author) => {
     //select random color without repeating previous color
+    // text =
+    //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec accumsan metus. Fusce tempus auctor efficitur. Etiam sit amet sem eget elit maximus posuere a sed libero. Morbi eu mi eu quam commodo maximus. Donec neque mauris, ultricies sit amet iaculis eu, accumsan in risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas egestas sollicitudin massa eu rutrum. Praesent euismod suscipit sem, a commodo leo ultrices a. '
+
     const oldColor = $('#text').css('color') // get prev color (always returns RGB)
     const updatedColors = [...colors].filter(item => item !== oldColor) // remove prev col
     const color = Math.floor(Math.random() * updatedColors.length) // random index

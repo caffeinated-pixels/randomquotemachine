@@ -2,5 +2,6 @@
 
 footer {
   margin-top: auto;
+  margin-bottom: 0.3em;
   @include text-shadow($color: #615858); // override default color
 }
