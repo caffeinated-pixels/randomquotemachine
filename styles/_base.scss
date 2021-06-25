@@ -29,4 +29,13 @@ body {
 
   line-height: 1.5;
   background-color: $body-bg;
+
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 100%;
+  align-items: start;
+}
+
+.container {
+  max-width: 800px;
 }

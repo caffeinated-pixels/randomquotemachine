@@ -81,6 +81,14 @@ body {
   text-align: center;
   line-height: 1.5;
   background-color: salmon;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 100%;
+  align-items: start;
+}
+
+.container {
+  max-width: 800px;
 }
 
 h1 {
@@ -92,7 +100,6 @@ h1 {
 header {
   background-color: lightblue;
   width: 100%;
-  max-width: 600px;
   padding: 1em;
 }
 
