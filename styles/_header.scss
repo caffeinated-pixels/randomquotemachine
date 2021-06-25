@@ -1,5 +1,12 @@
 // main: ./main.scss
 
+header {
+  background-color: $header-bg;
+  width: 100%;
+  padding: 0.5em;
+  line-height: 1;
+}
+
 h1 {
   font: {
     family: 'Monofett';
@@ -7,11 +14,8 @@ h1 {
   }
 
   color: $header-text;
-}
 
-header {
-  background-color: $header-bg;
-  width: 100%;
-  padding: 0.5em;
-  line-height: 1;
+  @include mq(500px) {
+    font-size: 3.5rem;
+  }
 }

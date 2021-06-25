@@ -7,12 +7,16 @@
   background-color: $quote-box-bg;
   border: 4px solid $header-bg;
 
-  max-width: 700px;
+  max-width: 650px;
   height: 400px;
 
   display: grid;
   grid-template-rows: 1fr auto;
   border-radius: 2%;
+
+  @include mq(500px) {
+    height: 500px;
+  }
 }
 
 .text-wrapper {
@@ -20,15 +24,24 @@
   overflow-y: auto;
   min-height: 4em;
   max-height: 250px;
+
+  @include mq(500px) {
+    min-height: 6em;
+    max-height: 380px;
+  }
 }
 
 .quote-box-text,
 .quote-box-author {
-  @include text-shadow();
+  text-shadow: 2px 2px 2px $text-shadow-color;
 }
 
 .quote-box-text {
   font-size: 1.5rem;
+
+  @include mq(500px) {
+    font-size: 2rem;
+  }
 }
 
 .quote-box-text::before {
@@ -45,6 +58,10 @@
   font-size: 1rem;
   text-align: right;
   margin-top: 0.25em;
+
+  @include mq(500px) {
+    font-size: 1.4rem;
+  }
 }
 
 .button-wrapper {

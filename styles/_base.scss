@@ -4,27 +4,25 @@
 $button-blue: #337ab7;
 $blue-dk-blue: #275d8b;
 $body-bg: #fb9084;
-// $body-bg: salmon;
-// $body-bg: linear-gradient(to bottom, #fa8072, #fba69d);
 
 $header-bg: lightblue;
 $header-text: darkred;
 $quote-box-bg: beige;
 $button-text-color: white;
+$text-shadow-color: #c0c0c0;
 
 $footer-link-color: #002477;
 $footer-link-hover-color: #800080;
 
-// mixin for text-shadow with default args
-@mixin text-shadow($x: 2px, $y: 2px, $blur: 2px, $color: #c0c0c0) {
-  text-shadow: $x $y $blur $color;
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content; /* lets us pass content block into mixin */
+  }
 }
 
 body {
-  font: {
-    family: 'Acme', sans-serif;
-    size: 1rem;
-  }
+  font-family: 'Acme', sans-serif;
+
   text-align: center;
   background: $body-bg;
 
