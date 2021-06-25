@@ -79,7 +79,6 @@ body {
   font-family: 'Acme', sans-serif;
   font-size: 1rem;
   text-align: center;
-  line-height: 1.5;
   background-color: salmon;
   display: flex;
   flex-direction: column;
@@ -100,34 +99,51 @@ h1 {
 header {
   background-color: lightblue;
   width: 100%;
-  padding: 1em;
+  padding: 0.5em 1em;
+  line-height: 1;
 }
 
-#quote-box {
-  margin-top: 25px;
-  padding: 25px 50px;
+.quote-box {
+  margin-top: 1.5em;
+  padding: 0.5em 1em;
   box-shadow: 5px 5px 15px grey;
   background-color: beige;
-  min-width: 350px;
-  border-radius: 15px;
+  height: 450px;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
-#text,
-#author {
+.text-wrapper {
+  align-self: center;
+}
+
+.quote-box-text,
+.quote-box-author {
   text-shadow: 2px 2px 2px #c0c0c0;
 }
 
-#text {
+.quote-box-text {
   font-size: 1.5rem;
 }
 
-#author {
+.quote-box-author {
   font-size: 1rem;
+  text-align: right;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn-primary {
   background-color: #337ab7;
   border-color: #2e6da4;
+  color: white;
+  border-radius: 5px;
+  padding: 0.25em 0.75em;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .fa-twitter {

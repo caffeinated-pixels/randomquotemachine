@@ -7,6 +7,8 @@ $body-bg: salmon;
 
 $header-bg: lightblue;
 $header-text: darkred;
+$quote-box-bg: beige;
+$button-text-color: white;
 
 // mixin for text-shadow with default args
 @mixin text-shadow($x: 2px, $y: 2px, $blur: 2px, $color: #c0c0c0) {
@@ -25,8 +27,6 @@ body {
     size: 1rem;
   }
   text-align: center;
-
-  line-height: 1.5;
   background-color: $body-bg;
 
   display: flex;

@@ -1,30 +1,51 @@
 // main: ./main.scss
 
-#quote-box {
-  margin-top: 25px;
-  padding: 25px 50px;
+.quote-box {
+  margin-top: 1.5em;
+  padding: 0.5em 1em;
   box-shadow: 5px 5px 15px grey;
-  background-color: beige;
-  min-width: 350px;
-  border-radius: 15px;
+  background-color: $quote-box-bg;
+
+  height: 450px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
-#text,
-#author {
+.text-wrapper {
+  // background-color: lightblue;
+  align-self: center;
+}
+
+.quote-box-text,
+.quote-box-author {
   @include text-shadow();
 }
 
-#text {
+.quote-box-text {
   font-size: 1.5rem;
 }
 
-#author {
+.quote-box-author {
   font-size: 1rem;
+  text-align: right;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn-primary {
   background-color: $bs3-btnblue;
   border-color: $bs3-btnblue-border;
+  color: $button-text-color;
+  border-radius: 5px;
+  padding: 0.25em 0.75em;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .fa-twitter {

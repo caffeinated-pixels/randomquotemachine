@@ -75,11 +75,13 @@
     </header>
 
     <!-- quote-box text to be updated by jQuery -->
-    <main class="container" id="quote-box">
-      <p class="text-center" id="text">Fetching random quote ...</p>
-      <p class="text-right" id="author"></p>
+    <main class="quote-box container" id="quote-box">
+      <div class="text-wrapper">
+        <p class="quote-box-text" id="text">Fetching random quote ...</p>
+        <p class="quote-box-author" id="author"></p>
+      </div>
 
-      <div class="buttons">
+      <div class="button-wrapper">
         <button class="col-auto btn btn-primary" id="new-quote">
           Hit me again!
         </button>
