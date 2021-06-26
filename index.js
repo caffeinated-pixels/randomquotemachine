@@ -56,7 +56,7 @@ $(document).ready(function() {
     if (author) {
       $('#author').fadeOut(750, () => {
         $('#author').html(`&#8212\xa0\xa0${author}`)
-        $('#author').fadeIn(3000)
+        $('#author').fadeIn(1000)
       }) // need to use callback so it waits for fadeOut to finish!
     }
 
