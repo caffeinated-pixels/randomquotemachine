@@ -46,19 +46,22 @@ $(document).ready(function() {
     const color = Math.floor(Math.random() * updatedColors.length) // random index
 
     // display quote and author on page using fade animations
-    $('#text').fadeOut(750, () => {
+    $('.text-wrapper').fadeOut(750, () => {
       $('#text')
         .html(text)
         .css('color', updatedColors[color]) // change color
-      $('#text').fadeIn(1000)
+      if (author) {
+        $('#author').html(`&#8212\xa0\xa0${author}`)
+      }
+      $('.text-wrapper').fadeIn(1000)
     }) // need to use callback so it waits for fadeOut to finish!
 
-    if (author) {
-      $('#author').fadeOut(750, () => {
-        $('#author').html(`&#8212\xa0\xa0${author}`)
-        $('#author').fadeIn(1000)
-      }) // need to use callback so it waits for fadeOut to finish!
-    }
+    // if (author) {
+    //   $('#author').fadeOut(750, () => {
+    //     $('#author').html(`&#8212\xa0\xa0${author}`)
+    //     $('#author').fadeIn(1000)
+    //   }) // need to use callback so it waits for fadeOut to finish!
+    // }
 
     // update href of tweet button
     $('#tweet-quote').attr(
@@ -70,5 +73,5 @@ $(document).ready(function() {
 
   getQuote() // automatically retrieves first random quote from API
 
-  $('#new-quote').on('click', () => getQuote()) // get new quote from api
+  $('#new-quote').on('click', getQuote) // get new quote from api
 })
