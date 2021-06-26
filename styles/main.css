@@ -131,13 +131,11 @@ h1 {
 .text-wrapper {
   align-self: center;
   overflow-y: auto;
-  min-height: 4em;
   max-height: 250px;
 }
 
 @media only screen and (min-width: 500px) {
   .text-wrapper {
-    min-height: 6em;
     max-height: 380px;
     /* lets us pass content block into mixin */
   }
@@ -172,6 +170,7 @@ h1 {
   font-size: 1rem;
   text-align: right;
   margin-top: 0.25em;
+  min-height: 1.5em;
 }
 
 @media only screen and (min-width: 500px) {
