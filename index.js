@@ -16,7 +16,6 @@ $(document).ready(function() {
   ]
 
   const getQuote = () => {
-    // Just to overcomplicate things, I included some error handling in the fetch request as I thought it would be a useful exercise
     const errorMsg = updateText('Opps something went wrong')
 
     fetch('https://api.quotable.io/random')
@@ -52,7 +51,10 @@ $(document).ready(function() {
         .css('color', updatedColors[color]) // change color
       if (author) {
         $('#author').html(`&#8212\xa0\xa0${author}`)
+      } else {
+        $('#author').html('')
       }
+
       $('.text-wrapper').fadeIn(1000)
     }) // need to use callback so it waits for fadeOut to finish!
 
