@@ -37,12 +37,9 @@ $(document).ready(function() {
 
   const updateText = (text, author) => {
     //select random color without repeating previous color
-    // text =
-    //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec accumsan metus. Fusce tempus auctor efficitur. Etiam sit amet sem eget elit maximus posuere a sed libero. Morbi eu mi eu quam commodo maximus. Donec neque mauris, ultricies sit amet iaculis eu, accumsan in risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas egestas sollicitudin massa eu rutrum. Praesent euismod suscipit sem, a commodo leo ultrices a. '
-
-    const oldColor = $('#text').css('color') // get prev color (always returns RGB)
-    const updatedColors = [...colors].filter(item => item !== oldColor) // remove prev col
-    const color = Math.floor(Math.random() * updatedColors.length) // random index
+    const oldColor = $('#text').css('color')
+    const updatedColors = [...colors].filter(item => item !== oldColor)
+    const color = Math.floor(Math.random() * updatedColors.length)
 
     // display quote and author on page using fade animations
     $('.text-wrapper').fadeOut(750, () => {
@@ -56,14 +53,7 @@ $(document).ready(function() {
       }
 
       $('.text-wrapper').fadeIn(1000)
-    }) // need to use callback so it waits for fadeOut to finish!
-
-    // if (author) {
-    //   $('#author').fadeOut(750, () => {
-    //     $('#author').html(`&#8212\xa0\xa0${author}`)
-    //     $('#author').fadeIn(1000)
-    //   }) // need to use callback so it waits for fadeOut to finish!
-    // }
+    }) // we use callback so it waits for fadeOut to finish!
 
     // update href of tweet button
     $('#tweet-quote').attr(
@@ -75,5 +65,5 @@ $(document).ready(function() {
 
   getQuote() // automatically retrieves first random quote from API
 
-  $('#new-quote').on('click', getQuote) // get new quote from api
+  $('#new-quote').on('click', getQuote) // event listener for quote button
 })
